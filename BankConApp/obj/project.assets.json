@@ -1,11 +1,30 @@
 {
   "version": 3,
   "targets": {
-    "net5.0": {}
+    "net5.0": {
+      "BankLibrary/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "compile": {
+          "bin/placeholder/BankLibrary.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/BankLibrary.dll": {}
+        }
+      }
+    }
   },
-  "libraries": {},
+  "libraries": {
+    "BankLibrary/1.0.0": {
+      "type": "project",
+      "path": "../BankLibrary/BankLibrary.csproj",
+      "msbuildProject": "../BankLibrary/BankLibrary.csproj"
+    }
+  },
   "projectFileDependencyGroups": {
-    "net5.0": []
+    "net5.0": [
+      "BankLibrary >= 1.0.0"
+    ]
   },
   "packageFolders": {
     "C:\\Users\\Maheshkumar\\.nuget\\packages\\": {}
@@ -33,7 +52,11 @@
       "frameworks": {
         "net5.0": {
           "targetAlias": "net5.0",
-          "projectReferences": {}
+          "projectReferences": {
+            "D:\\Client\\AykanSoft\\DotNet5Mar2021\\BankSolution\\BankLibrary\\BankLibrary.csproj": {
+              "projectPath": "D:\\Client\\AykanSoft\\DotNet5Mar2021\\BankSolution\\BankLibrary\\BankLibrary.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

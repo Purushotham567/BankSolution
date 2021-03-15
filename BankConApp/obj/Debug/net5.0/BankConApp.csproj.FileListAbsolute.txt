@@ -14,3 +14,6 @@ D:\Client\AykanSoft\DotNet5Mar2021\BankSolution\BankConApp\obj\Debug\net5.0\Bank
 D:\Client\AykanSoft\DotNet5Mar2021\BankSolution\BankConApp\obj\Debug\net5.0\ref\BankConApp.dll
 D:\Client\AykanSoft\DotNet5Mar2021\BankSolution\BankConApp\obj\Debug\net5.0\BankConApp.pdb
 D:\Client\AykanSoft\DotNet5Mar2021\BankSolution\BankConApp\obj\Debug\net5.0\BankConApp.genruntimeconfig.cache
+D:\Client\AykanSoft\DotNet5Mar2021\BankSolution\BankConApp\bin\Debug\net5.0\BankLibrary.dll
+D:\Client\AykanSoft\DotNet5Mar2021\BankSolution\BankConApp\bin\Debug\net5.0\BankLibrary.pdb
+D:\Client\AykanSoft\DotNet5Mar2021\BankSolution\BankConApp\obj\Debug\net5.0\BankConApp.csproj.CopyComplete
