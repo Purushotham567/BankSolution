@@ -18,3 +18,6 @@
 - 02Procedurial
 - 03Properties
 - 04Inheritance
+- 05Encapsulation
+- 06Polymorphism
+- 07Indexers
