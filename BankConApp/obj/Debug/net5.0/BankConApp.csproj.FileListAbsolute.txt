@@ -1,0 +1,16 @@
+D:\Client\AykanSoft\DotNet5Mar2021\BankSolution\BankConApp\bin\Debug\net5.0\BankConApp.exe
+D:\Client\AykanSoft\DotNet5Mar2021\BankSolution\BankConApp\bin\Debug\net5.0\BankConApp.deps.json
+D:\Client\AykanSoft\DotNet5Mar2021\BankSolution\BankConApp\bin\Debug\net5.0\BankConApp.runtimeconfig.json
+D:\Client\AykanSoft\DotNet5Mar2021\BankSolution\BankConApp\bin\Debug\net5.0\BankConApp.runtimeconfig.dev.json
+D:\Client\AykanSoft\DotNet5Mar2021\BankSolution\BankConApp\bin\Debug\net5.0\BankConApp.dll
+D:\Client\AykanSoft\DotNet5Mar2021\BankSolution\BankConApp\bin\Debug\net5.0\ref\BankConApp.dll
+D:\Client\AykanSoft\DotNet5Mar2021\BankSolution\BankConApp\bin\Debug\net5.0\BankConApp.pdb
+D:\Client\AykanSoft\DotNet5Mar2021\BankSolution\BankConApp\obj\Debug\net5.0\BankConApp.csprojAssemblyReference.cache
+D:\Client\AykanSoft\DotNet5Mar2021\BankSolution\BankConApp\obj\Debug\net5.0\BankConApp.GeneratedMSBuildEditorConfig.editorconfig
+D:\Client\AykanSoft\DotNet5Mar2021\BankSolution\BankConApp\obj\Debug\net5.0\BankConApp.AssemblyInfoInputs.cache
+D:\Client\AykanSoft\DotNet5Mar2021\BankSolution\BankConApp\obj\Debug\net5.0\BankConApp.AssemblyInfo.cs
+D:\Client\AykanSoft\DotNet5Mar2021\BankSolution\BankConApp\obj\Debug\net5.0\BankConApp.csproj.CoreCompileInputs.cache
+D:\Client\AykanSoft\DotNet5Mar2021\BankSolution\BankConApp\obj\Debug\net5.0\BankConApp.dll
+D:\Client\AykanSoft\DotNet5Mar2021\BankSolution\BankConApp\obj\Debug\net5.0\ref\BankConApp.dll
+D:\Client\AykanSoft\DotNet5Mar2021\BankSolution\BankConApp\obj\Debug\net5.0\BankConApp.pdb
+D:\Client\AykanSoft\DotNet5Mar2021\BankSolution\BankConApp\obj\Debug\net5.0\BankConApp.genruntimeconfig.cache
