@@ -22,6 +22,6 @@
 - 06Polymorphism
 - 07Indexers
 - 08Static
-- 09ExceptionHandling
+- 09ExceptionManagement
 - 10DelegatesEvents
 - 11Serialization
