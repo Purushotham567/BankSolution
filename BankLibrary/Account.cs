@@ -2,7 +2,7 @@
 
 namespace BankLibrary
 {
-  public class Account
+  public abstract class Account
   {
     private int _accountNumber;
     private string _holdersName;
@@ -32,15 +32,17 @@ namespace BankLibrary
       protected set { _balance = value; }
     }
 
-    public void Deposit(decimal amount)
+    public virtual void Deposit(decimal amount)
     {
-      Console.WriteLine("Coming from Account class Deposit");
-      _balance += amount;    
+      _balance += amount;
+      
     }
 
-    public void Withdraw(decimal amount)
+    public abstract void Withdraw(decimal amount);
+
+    public override string ToString()
     {
-      Console.WriteLine("Coming from Account class Withdraw");
+      return $"AccountNumber: {_accountNumber}, HoldersName: {_holdersName}, Balance: {_balance}";
     }
   }
 }

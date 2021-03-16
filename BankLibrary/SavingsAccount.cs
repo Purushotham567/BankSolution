@@ -15,10 +15,8 @@ namespace BankLibrary
       _minBalance = 500;
     }
 
-    // public void Withdraw(decimal amount)
-    public new void Withdraw(decimal amount) // hides the base class withdraw method
+    public override void Withdraw(decimal amount)
     {
-      Console.WriteLine("Coming from SavingsAccount class Withdraw");
       if ((Balance - amount) < _minBalance)
       {
         Console.WriteLine($"Insufficient funds in SavingsAccount, can withdraw upto: {Balance - _minBalance}");

@@ -8,18 +8,22 @@ namespace BankConApp
   {
     static void Main(string[] args)
     {
-      //Console.WriteLine("Welcome to Bank App: " + DateTime.Now);
+      Account acc;
 
-      //count acc = new Account(101, "Tintin", 9000.87m);
-      SavingsAccount acc = new SavingsAccount(101, "Tintin", 9000.87m);
 
-      Console.WriteLine($"AccountNumber: {acc.AccountNumber}, HoldersName: {acc.HoldersName}, Balance: {acc.Balance}");
+      acc = new SavingsAccount(101, "Tintin", 9000.87m);
+      //acc = new CurrentAccount(201, "Mandrake", 7000.00m, 2000);
+      //acc = new CurrentAccount(202, "Snowy", 7000.00m);
+      //acc = new FixedDepositAccount(301, "Thomson", 2000.00m);
+
+      Console.WriteLine(acc);
       acc.Deposit(100);
       Console.WriteLine($"New Balance: {acc.Balance}, After 100 Deposit");
       acc.Withdraw(100);
-      //acc.Balance = 100000;
       Console.WriteLine($"New Balance: {acc.Balance}, After 100 Withdrawn");
-
+      Console.ReadKey(true);
+      //acc.Withdraw(7000.90m);
+      //Console.WriteLine($"New Balance: {acc.Balance}, After 7000 Withdrawn");
     }
   }
 }

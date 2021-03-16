@@ -21,3 +21,7 @@
 - 05Encapsulation
 - 06Polymorphism
 - 07Indexers
+- 08Static
+- 09ExceptionHandling
+- 10DelegatesEvents
+- 11Serialization
