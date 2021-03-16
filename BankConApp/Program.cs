@@ -24,6 +24,10 @@ namespace BankConApp
       Console.ReadKey(true);
       //acc.Withdraw(7000.90m);
       //Console.WriteLine($"New Balance: {acc.Balance}, After 7000 Withdrawn");
+      Console.WriteLine(acc[0]);
+      Console.WriteLine(acc[1]);
+      Console.WriteLine(acc[2]);
+      Console.WriteLine(acc[3]);
     }
   }
 }

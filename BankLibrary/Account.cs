@@ -12,7 +12,7 @@ namespace BankLibrary
     {
       _accountNumber = accountNumber;
       _holdersName = holdersName;
-      _balance = balance;      
+      _balance = balance;
     }
 
     public int AccountNumber
@@ -23,7 +23,7 @@ namespace BankLibrary
     public string HoldersName
     {
       get { return _holdersName; }
-      set { _holdersName = value;}
+      set { _holdersName = value; }
     }
 
     public decimal Balance
@@ -32,10 +32,32 @@ namespace BankLibrary
       protected set { _balance = value; }
     }
 
+    public Object this[int index]
+    {
+      get
+      {
+        if (index == 0)
+        {
+          return _accountNumber;
+        }
+        else if (index == 1)
+        {
+          return _holdersName;
+        }
+        else if (index == 2)
+        {
+          return _balance;
+        }
+        else
+        {
+          return "Invalid index value";
+        }
+      }
+    }
+
     public virtual void Deposit(decimal amount)
     {
       _balance += amount;
-      
     }
 
     public abstract void Withdraw(decimal amount);
