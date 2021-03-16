@@ -50,13 +50,18 @@ namespace BankLibrary
         }
         else
         {
-          return "Invalid index value";
+          throw new IndexOutOfRangeException($"No data at the given index: {index}");
         }
       }
     }
 
     public virtual void Deposit(decimal amount)
     {
+      if (amount < 1)
+      {
+        throw new ArgumentNullException($"deposit amount cannot be 0 or less");
+      }
+
       _balance += amount;
     }
 

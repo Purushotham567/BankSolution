@@ -15,20 +15,17 @@ namespace BankLibrary
       _minOpeningBalance = 3000;
       if (balance < _minOpeningBalance)
       {
-        Console.WriteLine($"Fixed Deposit should have a minimum opening balance of {_minOpeningBalance}");
-        return;
+        throw new ArgumentException($"Fixed Deposit should have a minimum opening balance of {_minOpeningBalance}");
       }
     }
 
     public override void Deposit(decimal amount)
     {
-      Console.WriteLine("Deposit Not supported in Fixed Deposit Account");
-      return;
+      throw new Exception("Deposit Not supported in Fixed Deposit Account");
     }
     public override void Withdraw(decimal amount)
     {
-      Console.WriteLine("Withdraw Not supported in Fixed Deposit Account");
-      return;
+      throw new Exception("Withdraw Not supported in Fixed Deposit Account");
     }
 
   }

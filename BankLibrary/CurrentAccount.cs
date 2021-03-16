@@ -20,8 +20,7 @@ namespace BankLibrary
     {
       if (((Balance + _odLimit) - amount) < 0)
       {
-        Console.WriteLine($"Insufficient Funds in CurrentAccount, Can withdraw upto: {Balance + _odLimit}");
-        return;
+       throw new ArgumentNullException($"Insufficient Funds in CurrentAccount, Can withdraw upto: {Balance + _odLimit}");
       }
       Balance -= amount;
     }
