@@ -59,9 +59,8 @@ namespace BankLibrary
     {
       if (amount < 1)
       {
-        throw new ArgumentNullException($"deposit amount cannot be 0 or less");
+        throw new NegativeException($"deposit amount cannot be 0 or less");
       }
-
       _balance += amount;
     }
 

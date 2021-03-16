@@ -18,9 +18,13 @@ namespace BankLibrary
 
     public override void Withdraw(decimal amount)
     {
+      if (amount < 1)
+      {
+        throw new NegativeException($"withdraw amount cannot be 0 or less");
+      }
       if (((Balance + _odLimit) - amount) < 0)
       {
-       throw new ArgumentNullException($"Insufficient Funds in CurrentAccount, Can withdraw upto: {Balance + _odLimit}");
+       throw new InsufficientFundsException(AccountNumber, Balance, amount, $"Insufficient Funds in CurrentAccount, Can withdraw upto: {Balance + _odLimit}");
       }
       Balance -= amount;
     }

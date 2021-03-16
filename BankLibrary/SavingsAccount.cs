@@ -15,7 +15,7 @@ namespace BankLibrary
       _minBalance = 500;
       if (balance < _minBalance)
       {
-        throw new ArgumentException($"Savings Account should have a minimum opening balance of {_minBalance}");
+        throw new OpeningBalanceException($"Savings Account should have a minimum opening balance of {_minBalance}");
       }
     }
 
@@ -23,11 +23,11 @@ namespace BankLibrary
     {
       if (amount < 1)
       {
-        throw new ArgumentNullException($"withdraw amount cannot be 0 or less");
+        throw new NegativeException($"withdraw amount cannot be 0 or less");
       }
       if ((Balance - amount) < _minBalance)
       {
-        throw new ArgumentNullException($"Insufficient funds in SavingsAccount, can withdraw upto: {Balance - _minBalance}");
+        throw new InsufficientFundsException(AccountNumber, Balance, amount, $"Insufficient funds in SavingsAccount, can withdraw upto: {Balance - _minBalance}");
       }
       Balance -= amount;
     }

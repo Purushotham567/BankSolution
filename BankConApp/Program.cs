@@ -13,8 +13,8 @@ namespace BankConApp
       Account acc;
       try
       {
-        acc = new SavingsAccount(101, "Tintin", 9000.87m);
-        //acc = new CurrentAccount(201, "Mandrake", 7000.00m, 2000);
+        //acc = new SavingsAccount(101, "Tintin", 9000.87m);
+        acc = new CurrentAccount(201, "Mandrake", 7000.00m, 2000);
         //acc = new CurrentAccount(202, "Snowy", 7000.00m);
         //acc = new FixedDepositAccount(301, "Thomson", 2000.00m);
 
@@ -22,15 +22,11 @@ namespace BankConApp
 
         acc.Deposit(100);
         Console.WriteLine($"New Balance: {acc.Balance}, After 100 Deposit");
-        acc.Withdraw(8700);
+        acc.Withdraw(9101);
         Console.WriteLine($"New Balance: {acc.Balance}, After 8700 Withdrawn");
-        //Console.ReadKey(true);
-        //acc.Withdraw(7000.90m);
-        //Console.WriteLine($"New Balance: {acc.Balance}, After 7000 Withdrawn");
         Printer.Print(message: acc[0].ToString(), header: "Account Number");
         Console.WriteLine(acc[1]);
         Console.WriteLine(acc[2]);
-        Console.WriteLine(acc[3]);
 
       }
       catch (ArgumentException ex)
@@ -39,6 +35,30 @@ namespace BankConApp
       }
       catch (IndexOutOfRangeException ex)
       {
+        WriteLine(ex);
+      }
+      catch (OpeningBalanceException ex)
+      {
+        WriteLine(ex);
+      }
+      catch (NegativeException ex)
+      {
+        WriteLine(ex);
+      }
+      catch (WithdrawNotSupportedException ex)
+      {
+        WriteLine(ex);
+      }
+      catch (DepositNotSupportedException ex)
+      {
+        WriteLine(ex);
+      }
+      catch (InsufficientFundsException ex)
+      {
+        WriteLine($"Data: {ex.Data}");
+
+        WriteLine($"Insufficient Fund Exception Details: AccountNumber: {ex.AccountNumber}, CurrentBalance: {ex.CurrentBalance}, TransactionAmount: {ex.TransactionAmount}");
+
         WriteLine(ex);
       }
       catch (Exception ex)
