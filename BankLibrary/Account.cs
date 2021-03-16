@@ -4,9 +4,9 @@ namespace BankLibrary
 {
   public class Account
   {
-    int _accountNumber;
-    string _holdersName;
-    decimal _balance;
+    private int _accountNumber;
+    private string _holdersName;
+    private decimal _balance;
 
     public Account(int accountNumber, string holdersName, decimal balance)
     {
@@ -29,16 +29,18 @@ namespace BankLibrary
     public decimal Balance
     {
       get { return _balance; }
-      set { _balance = value; }
+      protected set { _balance = value; }
     }
 
     public void Deposit(decimal amount)
     {
+      Console.WriteLine("Coming from Account class Deposit");
       _balance += amount;    
     }
 
     public void Withdraw(decimal amount)
     {
+      Console.WriteLine("Coming from Account class Withdraw");
     }
   }
 }
