@@ -30,6 +30,8 @@ namespace BankLibrary
         throw new InsufficientFundsException(AccountNumber, Balance, amount, $"Insufficient funds in SavingsAccount, can withdraw upto: {Balance - _minBalance}");
       }
       Balance -= amount;
+      //D:Step III
+      if (WOnBalanceChanged != null) { WOnBalanceChanged(AccountNumber, "Withdraw", amount, Balance); }
     }
   }
 }

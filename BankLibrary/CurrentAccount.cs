@@ -27,6 +27,9 @@ namespace BankLibrary
        throw new InsufficientFundsException(AccountNumber, Balance, amount, $"Insufficient Funds in CurrentAccount, Can withdraw upto: {Balance + _odLimit}");
       }
       Balance -= amount;
+      //D:Step III
+      if (WOnBalanceChanged != null) { WOnBalanceChanged(AccountNumber, "Withdraw", amount, Balance); }
+
     }
   }
 }

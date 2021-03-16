@@ -18,16 +18,17 @@ namespace BankConApp
         //acc = new CurrentAccount(202, "Snowy", 7000.00m);
         //acc = new FixedDepositAccount(301, "Thomson", 2000.00m);
 
+        //C:Step II Initialization of the Delegate with the Method which has the same signature of the delegate
+        acc.WOnBalanceChanged += new OnBalanceChanged(SMSAlert);
+        acc.WOnBalanceChanged += new OnBalanceChanged(EmailAlert);
+
+        acc.DOnBalanceChanged += SMSAlert;
+
         Printer.Print(message: acc.ToString(), header: "Account Details");
 
         acc.Deposit(100);
-        Console.WriteLine($"New Balance: {acc.Balance}, After 100 Deposit");
-        acc.Withdraw(9101);
-        Console.WriteLine($"New Balance: {acc.Balance}, After 8700 Withdrawn");
-        Printer.Print(message: acc[0].ToString(), header: "Account Number");
-        Console.WriteLine(acc[1]);
-        Console.WriteLine(acc[2]);
 
+        acc.Withdraw(4600);
       }
       catch (ArgumentException ex)
       {
@@ -101,6 +102,20 @@ namespace BankConApp
 
       #endregion
 
+    }
+
+    //C:StepI
+    static void SMSAlert(int accountNumber, string transactionType, decimal transactionAmount, decimal newBalance)
+    {
+      string smsmessage = $"AccountNumber: {accountNumber}, TransactionType: {transactionType}, TransactionAmount: {transactionAmount}, NewBalance: {newBalance}";
+
+      Printer.Print(smsmessage, "SMS Alert");
+    }
+    static void EmailAlert(int accountNumber, string transactionType, decimal transactionAmount, decimal newBalance)
+    {
+      string emailmessage = $"AccountNumber: {accountNumber}, TransactionType: {transactionType}, TransactionAmount: {transactionAmount}, NewBalance: {newBalance}";
+
+      Printer.Print(emailmessage, "Email Alert");
     }
   }
 }

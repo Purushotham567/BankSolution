@@ -2,12 +2,18 @@
 
 namespace BankLibrary
 {
+  //D:Step I, Declare the Delegate
+  public delegate void OnBalanceChanged(int accountNumber, string transactionType, decimal transactionAmount, decimal newBalance);
+
   public abstract class Account
   {
     private int _accountNumber;
     private string _holdersName;
     private decimal _balance;
-
+    //D:Step II Create ref of the Delegate
+    public OnBalanceChanged WOnBalanceChanged;
+    //D:Step II Create ref of the Delegate
+    public event OnBalanceChanged DOnBalanceChanged;
     public Account(int accountNumber, string holdersName, decimal balance)
     {
       _accountNumber = accountNumber;
@@ -62,6 +68,9 @@ namespace BankLibrary
         throw new NegativeException($"deposit amount cannot be 0 or less");
       }
       _balance += amount;
+      //D:Step III
+      if (DOnBalanceChanged != null) { DOnBalanceChanged(_accountNumber, "Deposit", amount, _balance); }
+
     }
 
     public abstract void Withdraw(decimal amount);
