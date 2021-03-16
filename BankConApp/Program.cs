@@ -14,8 +14,8 @@ namespace BankConApp
       try
       {
         //acc = new SavingsAccount(101, "Tintin", 9000.87m);
-        acc = new CurrentAccount(201, "Mandrake", 7000.00m, 2000);
-        //acc = new CurrentAccount(202, "Snowy", 7000.00m);
+        //acc = new CurrentAccount(201, "Mandrake", 7000.00m, 2000);
+        acc = new CurrentAccount(202, "Snowy", 5000.00m);
         //acc = new FixedDepositAccount(301, "Thomson", 2000.00m);
 
         //C:Step II Initialization of the Delegate with the Method which has the same signature of the delegate
