@@ -8,7 +8,7 @@ namespace BankLibrary
 {
   public class SavingsAccount : Account
   {
-    readonly decimal _minBalance;
+    private readonly decimal _minBalance;
 
     public SavingsAccount(int accountNumber, string holdersName, decimal balance) : base(accountNumber, holdersName, balance)
     {
