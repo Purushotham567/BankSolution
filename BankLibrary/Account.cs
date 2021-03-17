@@ -3,9 +3,10 @@
 namespace BankLibrary
 {
   //D:Step I, Declare the Delegate
+  [Serializable]
   public delegate void OnBalanceChanged(int accountNumber, string transactionType, decimal transactionAmount, decimal newBalance);
 
-
+  [Serializable]
   public abstract class Account
   {
     private int _accountNumber;

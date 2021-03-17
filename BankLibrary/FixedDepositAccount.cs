@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankLibrary
 {
- 
+  [Serializable]
   public class FixedDepositAccount : Account
   {
     private readonly decimal _minOpeningBalance;

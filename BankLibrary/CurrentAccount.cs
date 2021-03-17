@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BankLibrary
 {
-
+  [Serializable]
   public class CurrentAccount : Account
   {
     private readonly decimal _odLimit;
