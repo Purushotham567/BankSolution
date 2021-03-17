@@ -5,6 +5,7 @@ namespace BankLibrary
   //D:Step I, Declare the Delegate
   public delegate void OnBalanceChanged(int accountNumber, string transactionType, decimal transactionAmount, decimal newBalance);
 
+
   public abstract class Account
   {
     private int _accountNumber;
